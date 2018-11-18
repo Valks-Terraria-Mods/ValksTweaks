@@ -1,0 +1,5 @@
+author = valkyrienyanko
+version = 0.9
+displayName = Faster Weapons
+
+homepage = https://discord.gg/thMupbv

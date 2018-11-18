@@ -1,0 +1,4 @@
+All weapons use time is 25% faster.
+
+E.g. Minishark shoots 25% faster
+E.g. Sword swinging is 25% faster
