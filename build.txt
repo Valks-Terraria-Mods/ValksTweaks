@@ -1,5 +1,5 @@
-author = valkyrienyanko
-version = 1.4
+author = valkyrienyanko, convicted tomatophile (Stevie)
+version = 1.5
 displayName = Faster Weapons
 
 homepage = https://discord.gg/thMupbv
