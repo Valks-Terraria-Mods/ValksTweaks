@@ -12,7 +12,7 @@ namespace FasterDamages
             {
                 if (item.damage > 0)
                 {
-                    return 1.25f;
+                    return FasterDamagesConfig.Instance.WeaponSpeed;
                 }
             }
             return 1f;
