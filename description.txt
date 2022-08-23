@@ -1,3 +1,5 @@
+v1.6 - Fixed bug where magic weapons were not effected
+
 All weapons use time is 25% faster. (Configurable)
 
 E.g. Minishark shoots 25% faster
