@@ -3,19 +3,18 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ModLoader.Config;
 
-namespace FasterDamages
+namespace FasterDamages;
+
+[Label("Faster Weapons Config")]
+public class FasterDamagesConfig : ModConfig
 {
-    [Label("Faster Weapons Config")]
-    public class FasterDamagesConfig : ModConfig
-    {
-        public override ConfigScope Mode => ConfigScope.ServerSide;
+    public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        public static FasterDamagesConfig Instance;
+    public static FasterDamagesConfig Instance;
 
-        [Header("Speed")]
-        [Label("Weapon Speed")]
-        [DefaultValue(1.25f)]
-        [Range(0.5f, 10f)]
-        public float WeaponSpeed;
-    }
+    [Header("Speed")]
+    [Label("Weapon Speed")]
+    [DefaultValue(1.25f)]
+    [Range(0.5f, 10f)]
+    public float WeaponSpeed;
 }

@@ -1,11 +1,10 @@
 using Terraria.ModLoader;
 
-namespace FasterDamages
-{
+namespace FasterDamages;
+
 	class FasterDamages : Mod
 	{
 		public FasterDamages()
 		{
 		}
 	}
-}
