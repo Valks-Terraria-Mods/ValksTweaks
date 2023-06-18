@@ -2,9 +2,9 @@ using Terraria.ModLoader;
 
 namespace FasterDamages;
 
-	class FasterDamages : Mod
+class FasterDamages : Mod
+{
+	public FasterDamages()
 	{
-		public FasterDamages()
-		{
-		}
 	}
+}
