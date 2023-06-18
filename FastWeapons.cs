@@ -5,7 +5,7 @@ namespace FasterDamages;
 
 class FastWeapons : GlobalItem
 {
-    public override float UseTimeMultiplier(Item item, Player player)
+    public override float UseSpeedMultiplier(Item item, Player player)
     {
         if (item.pick > 0 || item.axe > 0 || item.hammer > 0) 
             return 1f;
@@ -13,7 +13,6 @@ class FastWeapons : GlobalItem
         if (item.DamageType == DamageClass.Magic || 
             item.DamageType == DamageClass.Ranged || 
             item.DamageType == DamageClass.Melee || 
-            item.DamageType == DamageClass.Ranged || 
             item.DamageType == DamageClass.Throwing || 
             item.DamageType == DamageClass.Summon)
         {

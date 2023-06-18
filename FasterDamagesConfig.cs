@@ -14,7 +14,7 @@ public class FasterDamagesConfig : ModConfig
 
     [Header("Speed")]
     [Label("Weapon Speed")]
-    [DefaultValue(1.25f)]
-    [Range(0.5f, 10f)]
+    [DefaultValue(10f)]
+    [Range(0.5f, 1000f)]
     public float WeaponSpeed;
 }
