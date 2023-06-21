@@ -1,1 +1,1 @@
-All weapons (ranged, melee, mage, summon, thrown) operate at a faster configurable speed.
+All weapons (except melee) operate at a faster configurable speed.
