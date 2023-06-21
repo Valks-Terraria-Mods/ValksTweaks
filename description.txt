@@ -1,6 +1,11 @@
-v1.6 - Fixed bug where magic weapons were not effected
+This mod allows you to configure the attack speed of most weapons.
 
-All weapons use time is 25% faster. (Configurable)
+FAQ:
+Q: The mod does not work?
+A: Make sure you are either using a ranged or magic type weapon and you have configured the attack speed slider to a higher value.
 
-E.g. Minishark shoots 25% faster
-E.g. Sword swinging is 25% faster
+Known Issues:
+- Melee weapons are not affected
+- Thrown weapons may not work
+
+Source: https://github.com/Valks-Terraria-Mods/FasterDamages (all contributions welcome)
