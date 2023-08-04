@@ -57,5 +57,20 @@ Configs: {
 			Label: Random Projectile Type
 			Tooltip: ""
 		}
+
+		AdditionalProjectilesLeft: {
+			Label: Additional Projectiles Left
+			Tooltip: ""
+		}
+
+		AdditionalProjectilesRight: {
+			Label: Additional Projectiles Right
+			Tooltip: ""
+		}
+
+		AdditionalProjectileHorizontalSpacing: {
+			Label: Additional Projectile Horizontal Spacing
+			Tooltip: ""
+		}
 	}
 }

@@ -45,4 +45,16 @@ public class FasterDamagesConfig : ModConfig
     [DefaultValue(1)]
     [Range(1, 100f)]
     public int ProjectileVelocityMultiplier;
+
+    [DefaultValue(0)]
+    [Range(0, 100)]
+    public int AdditionalProjectilesLeft;
+
+    [DefaultValue(0)]
+    [Range(0, 100)]
+    public int AdditionalProjectilesRight;
+
+    [DefaultValue(30)]
+    [Range(1, 1000)]
+    public int AdditionalProjectileHorizontalSpacing;
 }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -22,6 +23,20 @@ class GlobalWepItem : GlobalItem
             return false;
 
         return base.NeedsAmmo(item, player);
+    }
+
+    public override void ModifyManaCost(Item item, Player player, ref float reduce, ref float mult)
+    {
+        if (FasterDamagesConfig.Instance.InfiniteAmmo)
+            reduce = 0;
+    }
+
+    public override bool ConsumeItem(Item item, Player player)
+    {
+        if (FasterDamagesConfig.Instance.InfiniteAmmo)
+            return false;
+
+        return base.ConsumeItem(item, player);
     }
 
     public override void ModifyShootStats(Item item, Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
@@ -98,6 +113,55 @@ class GlobalWepItem : GlobalItem
 
 class GlobalWepProjectile : GlobalProjectile
 {
+    static bool spawningProjectiles;
+
+    public override void OnSpawn(Projectile projectile, IEntitySource source)
+    {
+        if (projectile.owner != Main.myPlayer)
+            return;
+
+        // Projectile.NewProjectile invokes OnSpawn, so prevent infinite loop
+        if (spawningProjectiles)
+            return;
+
+        spawningProjectiles = true;
+
+        var config = FasterDamagesConfig.Instance;
+
+        // Spawn the additional projectiles on right
+        var posRight = projectile.position;
+
+        for (int i = 0; i < config.AdditionalProjectilesRight; i++)
+        {
+            posRight += new Vector2(config.AdditionalProjectileHorizontalSpacing, 0);
+            SpawnProjectile(projectile, source, posRight);
+        }
+
+        // Spawn the additional projectiles on left
+        var posLeft = projectile.position;
+
+        for (int i = 0; i < config.AdditionalProjectilesLeft; i++)
+        {
+            posLeft -= new Vector2(config.AdditionalProjectileHorizontalSpacing, 0);
+            SpawnProjectile(projectile, source, posLeft);
+        }
+
+        spawningProjectiles = false;
+    }
+
+    void SpawnProjectile(Projectile projectile, IEntitySource source, Vector2 pos) =>
+        Projectile.NewProjectile(
+            source, 
+            pos, 
+            projectile.velocity, 
+            projectile.type, 
+            projectile.damage, 
+            projectile.knockBack, 
+            projectile.owner, 
+            projectile.ai[0], 
+            projectile.ai[1], 
+            projectile.ai[2]);
+
     public override bool PreAI(Projectile projectile)
     {
         if (!FasterDamagesConfig.Instance.AllProjectilesIgnoreCollision)
