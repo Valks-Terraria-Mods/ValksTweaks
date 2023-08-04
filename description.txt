@@ -2,7 +2,7 @@ This mod has several config options
 - Use Time Multiplier (lower values means faster fire rates)
 - Use Speed Multiplier (how fast the weapon art animation is played)
 - All Weapons Auto Reuse (no more manual clicking for items)
-- Infinite Ammo (applies to thrown and magical weapons as well)
+- Infinite Ammo (also applies to thrown and magical weapons)
 - All Projectile Types Ignore Collision (if true all projectiles will ignore tile collisions)
 - Random Projectile Type (a random projectile will be fired from your weapon if it shoots projectiles)
 - Projectile Type (override the projectile all weapons will fire, please note that "Random Projectile Type" must be set to false in order for this to work properly. Also note setting this to 0 will disable this feature.)

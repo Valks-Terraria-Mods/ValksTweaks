@@ -107,5 +107,20 @@ Configs: {
 			Label: Goblin Reforge Cost Multiplier
 			Tooltip: ""
 		}
+
+		HorizontalWingSpeedMultiplier: {
+			Label: Horizontal Wing Speed Multiplier
+			Tooltip: ""
+		}
+
+		HorizontalWingAccelerationMultiplier: {
+			Label: Horizontal Wing Acceleration Multiplier
+			Tooltip: ""
+		}
+
+		PickupRangeMultiplier: {
+			Label: Pickup Range Multiplier
+			Tooltip: ""
+		}
 	}
 }
