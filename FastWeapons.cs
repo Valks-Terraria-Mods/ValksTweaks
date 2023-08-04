@@ -79,6 +79,13 @@ class GlobalWepItem : GlobalItem
         velocity *= FasterDamagesConfig.Instance.ProjectileVelocityMultiplier;
     }
 
+    public override bool ReforgePrice(Item item, ref int reforgePrice, ref bool canApplyDiscount)
+    {
+        reforgePrice *= (int)FasterDamagesConfig.Instance.GoblinReforgeCostMultiplier;
+
+        return base.ReforgePrice(item, ref reforgePrice, ref canApplyDiscount);
+    }
+
     public override bool? CanAutoReuseItem(Item item, Player player)
     {
         if (IsTool(item) || !IsWeapon(item))
@@ -103,6 +110,16 @@ class GlobalWepItem : GlobalItem
 
         // A value of 4 seems good
         return FasterDamagesConfig.Instance.UseSpeedMultiplier;
+    }
+
+    public override float UseAnimationMultiplier(Item item, Player player)
+    {
+        var config = FasterDamagesConfig.Instance;
+
+        if (config.UseAnimationMultiplier == 1)
+            return base.UseAnimationMultiplier(item, player);
+
+        return config.UseAnimationMultiplier;
     }
 
     static bool IsWeapon(Item item) => item.damage > 0;

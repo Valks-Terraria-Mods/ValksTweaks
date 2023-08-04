@@ -72,5 +72,15 @@ Configs: {
 			Label: Additional Projectile Horizontal Spacing
 			Tooltip: ""
 		}
+
+		UseAnimationMultiplier: {
+			Label: Use Animation Multiplier
+			Tooltip: ""
+		}
+
+		ShootKnockback: {
+			Tooltip: ""
+			Label: Shoot Knockback
+		}
 	}
 }

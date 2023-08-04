@@ -20,6 +20,10 @@ public class FasterDamagesConfig : ModConfig
     [Range(float.Epsilon, 1f)]
     public float UseTimeMultiplier;
 
+    [DefaultValue(float.Epsilon)]
+    [Range(float.Epsilon, 1f)]
+    public float UseAnimationMultiplier;
+
     [DefaultValue(true)]
     public bool AllWeaponAutoReuse;
 
@@ -57,4 +61,8 @@ public class FasterDamagesConfig : ModConfig
     [DefaultValue(30)]
     [Range(1, 1000)]
     public int AdditionalProjectileHorizontalSpacing;
+
+    [DefaultValue(1f)]
+    [Range(0, 1f)]
+    public float GoblinReforgeCostMultiplier;
 }
