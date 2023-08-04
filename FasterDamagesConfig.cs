@@ -12,9 +12,9 @@ public class FasterDamagesConfig : ModConfig
 
     public static FasterDamagesConfig Instance => ModContent.GetInstance<FasterDamagesConfig>();
 
-    [DefaultValue(1000f)]
-    [Range(0.5f, 1000f)]
-    public float UseSpeedMultiplier;
+    [DefaultValue(4f)]
+    [Range(1, 1000)]
+    public int UseSpeedMultiplier;
 
     [DefaultValue(float.Epsilon)]
     [Range(float.Epsilon, 1f)]
@@ -44,5 +44,5 @@ public class FasterDamagesConfig : ModConfig
 
     [DefaultValue(1)]
     [Range(1, 100f)]
-    public float ProjectileVelocityMultiplier;
+    public int ProjectileVelocityMultiplier;
 }

@@ -1,6 +1,6 @@
 This mod has several config options
-- "Use Speed Multiplier" (set to a higher value for faster firerate for most weapons)
-- "Use Time Multiplier" (set to a lower value for faster firerate for example the starfury sword)
+- "Use Time Multiplier" (lower values means faster fire rates)
+- "Use Speed Multiplier" (how fast the weapon art animation is played)
 - "All Weapons Auto Reuse" (if true all weapons will auto fire for you, for example no more manual clicking for the wooden bow)
 - "Are Tools Effected" (if true tools will be affected by all config values)
 - "Infinite Ammo" (if true all weapons no longer consume ammo)
@@ -15,9 +15,7 @@ Please note that the "Projectile Type" config option has only been tested for th
 More features may be added later on.
 
 Known Issues:
-- Melee weapons swing art is not affected (so you can't see it but it is working)
-- Infinite ammo config option for thrown weapons does not work
-- Starfury star projectiles are still colliding with tiles even when config option "All Projectile Types Ignore Collision" is enabled
+- Infinite ammo config option not working for thrown or magical weapons
 
 If you know of any bugs or have any ideas please tell me in the discord https://discord.gg/866cg8yfxZ
 

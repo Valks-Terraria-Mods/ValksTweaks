@@ -80,11 +80,13 @@ class GlobalWepItem : GlobalItem
         return FasterDamagesConfig.Instance.UseTimeMultiplier;
     }
 
+    // This seems to only affect how fast the swing art animation is played
     public override float UseSpeedMultiplier(Item item, Player player)
     {
         if (IsTool(item) || !IsWeapon(item))
             return base.UseAnimationMultiplier(item, player);
 
+        // A value of 4 seems good
         return FasterDamagesConfig.Instance.UseSpeedMultiplier;
     }
 
@@ -98,9 +100,16 @@ class GlobalWepProjectile : GlobalProjectile
 {
     public override bool PreAI(Projectile projectile)
     {
-        if (projectile.owner == Main.myPlayer)
+        if (!FasterDamagesConfig.Instance.AllProjectilesIgnoreCollision)
         {
-            projectile.tileCollide = !FasterDamagesConfig.Instance.AllProjectilesIgnoreCollision;
+            return base.PreAI(projectile);
+        }
+        else
+        {
+            if (projectile.owner == Main.myPlayer)
+            {
+                projectile.tileCollide = !FasterDamagesConfig.Instance.AllProjectilesIgnoreCollision;
+            }
         }
 
         return base.PreAI(projectile);
