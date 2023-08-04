@@ -82,5 +82,30 @@ Configs: {
 			Tooltip: ""
 			Label: Shoot Knockback
 		}
+
+		WeaponDamageMultiplier: {
+			Label: Weapon Damage Multiplier
+			Tooltip: ""
+		}
+
+		WeaponCritMultiplier: {
+			Label: Weapon Crit Multiplier
+			Tooltip: ""
+		}
+
+		WeaponKnockbackMultiplier: {
+			Label: Weapon Knockback Multiplier
+			Tooltip: ""
+		}
+
+		ItemScaleMultiplier: {
+			Label: Item Scale Multiplier
+			Tooltip: ""
+		}
+
+		GoblinReforgeCostMultiplier: {
+			Label: Goblin Reforge Cost Multiplier
+			Tooltip: ""
+		}
 	}
 }

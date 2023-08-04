@@ -44,7 +44,19 @@ public class FasterDamagesConfig : ModConfig
 
     [DefaultValue(1)]
     [Range(1, 100)]
-    public int ProjectileDamageMultiplier;
+    public int WeaponDamageMultiplier;
+
+    [DefaultValue(1)]
+    [Range(1, 100)]
+    public int WeaponCritMultiplier;
+
+    [DefaultValue(1)]
+    [Range(1, 100)]
+    public int WeaponKnockbackMultiplier;
+
+    [DefaultValue(1)]
+    [Range(1, 20f)]
+    public float ItemScaleMultiplier;
 
     [DefaultValue(1)]
     [Range(1, 100f)]
@@ -65,4 +77,16 @@ public class FasterDamagesConfig : ModConfig
     [DefaultValue(1f)]
     [Range(0, 1f)]
     public float GoblinReforgeCostMultiplier;
+
+    [DefaultValue(1f)]
+    [Range(1f, 3f)]
+    public float HorizontalWingSpeedMultiplier;
+
+    [DefaultValue(1f)]
+    [Range(1f, 3f)]
+    public float HorizontalWingAccelerationMultiplier;
+
+    [DefaultValue(1f)]
+    [Range(1f, 1000f)]
+    public int PickupRangeMultiplier;
 }
