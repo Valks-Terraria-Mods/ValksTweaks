@@ -1,11 +1,24 @@
-This mod allows you to configure the attack speed of most weapons.
+This mod has several config options
+- "Use Speed Multiplier" (set to a higher value for faster firerate for most weapons)
+- "Use Time Multiplier" (set to a lower value for faster firerate for example the starfury sword)
+- "All Weapons Auto Reuse" (if true all weapons will auto fire for you, for example no more manual clicking for the wooden bow)
+- "Are Tools Effected" (if true tools will be affected by all config values)
+- "Infinite Ammo" (if true all weapons no longer consume ammo)
+- "All Projectile Types Ignore Collision" (if true all projectiles will ignore tile collisions)
+- "Random Projectile Type" (a random projectile will be fired from your weapon if it shoots projectiles)
+- "Projectile Type" (override the projectile all weapons will fire, please note that "Random Projectile Type" must be set to false in order for this to work properly. Also note setting this to 0 will disable this feature.)
+- "Projectile Damage Multiplier" (multiply how much damage projectiles will do)
+- "Projectile Velocity Multiplier" (multiply how faster projects will shoot)
 
-FAQ:
-Q: The mod does not work?
-A: Make sure you are either using a ranged or magic type weapon and you have configured the attack speed slider to a higher value.
+Please note that the "Projectile Type" config option has only been tested for the first 6 values. Numbers greater than this may shoot projectiles that either destroy tiles in your world, spawn lava pockets, or it might be just a ordinary arrow or snowball. Please report all projectile values that cause any kind of problems for you, thank you.
+
+More features may be added later on.
 
 Known Issues:
-- Melee weapons are not affected
-- Thrown weapons may not work
+- Melee weapons swing art is not affected (so you can't see it but it is working)
+- Infinite ammo config option for thrown weapons does not work
+- Starfury star projectiles are still colliding with tiles even when config option "All Projectile Types Ignore Collision" is enabled
+
+If you know of any bugs or have any ideas please tell me in the discord https://discord.gg/866cg8yfxZ
 
 Source: https://github.com/Valks-Terraria-Mods/FasterDamages (all contributions welcome)

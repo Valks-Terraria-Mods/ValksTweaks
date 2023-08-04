@@ -1,0 +1,61 @@
+Configs: {
+	FasterDamagesConfig: {
+		DisplayName: Faster Weapons Config
+		Headers.Speed: Speed Header
+
+		WeaponSpeed: {
+			Label: Weapon Speed
+			Tooltip: ""
+		}
+
+		UseSpeedMultiplier: {
+			Label: Use Speed Multiplier
+			Tooltip: ""
+		}
+
+		UseTimeMultiplier: {
+			Label: Use Time Multiplier
+			Tooltip: ""
+		}
+
+		AllWeaponAutoReuse: {
+			Label: All Weapon Auto Reuse
+			Tooltip: ""
+		}
+
+		AreToolsEffected: {
+			Label: Are Tools Effected
+			Tooltip: ""
+		}
+
+		ProjectileVelocityMultiplier: {
+			Tooltip: ""
+			Label: Projectile Velocity Multiplier
+		}
+
+		ProjectileDamageMultiplier: {
+			Label: Projectile Damage Multiplier
+			Tooltip: ""
+		}
+
+		ProjectileType: {
+			Label: Projectile Type
+			Tooltip: ""
+		}
+
+		InfiniteAmmo: {
+			Label: Infinite Ammo
+			Tooltip: ""
+		}
+
+		AllProjectilesIgnoreCollision: {
+			Label: All Projectiles Ignore Collision
+			Tooltip: ""
+		}
+
+		RandomProjectileType: {
+			Label: Random Projectile Type
+			Tooltip: ""
+		}
+	}
+}

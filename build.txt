@@ -1,5 +1,4 @@
 author = valkyrienyanko, convicted tomatophile (Stevie)
-version = 2.0.3
+version = 3.0.4
 displayName = Faster Weapons
-
-homepage = https://github.com/Valks-Terraria-Mods/FasterDamages
+homepage = https://discord.gg/866cg8yfxZ
