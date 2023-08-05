@@ -145,6 +145,27 @@ class GlobalWepItem : GlobalItem
 
     public override float UseAnimationMultiplier(Item item, Player player)
     {
+        var blacklist = new short[]
+        {
+            ItemID.MagicMirror,
+            ItemID.CoolWhip,
+            ItemID.BlandWhip,
+            ItemID.BoneWhip,
+            ItemID.FireWhip,
+            ItemID.IvyWhip,
+            ItemID.MaceWhip,
+            ItemID.RainbowWhip,
+            ItemID.ScytheWhip,
+            ItemID.SwordWhip,
+            ItemID.ThornWhip
+        };
+
+        foreach (var blacklistedItem in blacklist)
+        {
+            if (blacklistedItem == item.type)
+                return base.UseAnimationMultiplier(item, player);
+        }
+
         var config = Config.Instance;
 
         if (config.UseAnimationMultiplier == 1)
