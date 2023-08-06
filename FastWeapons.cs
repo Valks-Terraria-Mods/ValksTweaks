@@ -130,7 +130,21 @@ class GlobalWepItem : GlobalItem
         if (IsTool(item) || !IsWeapon(item))
             return base.UseTimeMultiplier(item, player);
 
-        return Config.Instance.UseTimeMultiplier;
+        var config = Config.Instance;
+        var globalMultiplier = config.UseTimeGlobalMultiplier;
+
+        if (IsMagicWeapon(item))
+            return config.UseTimeMagicMultiplier * globalMultiplier;
+        else if (IsMeleeWeapon(item))
+            return config.UseTimeMeleeMultiplier * globalMultiplier;
+        else if (IsRangedWeapon(item))
+            return config.UseTimeRangedMultiplier * globalMultiplier;
+        else if (IsSummonWeapon(item))
+            return config.UseTimeSummonMultiplier * globalMultiplier;
+        else if (IsThrownWeapon(item))
+            return config.UseTimeThrownMultiplier * globalMultiplier;
+
+        return base.UseTimeMultiplier(item, player);
     }
 
     // This seems to only affect how fast the swing art animation is played
@@ -139,11 +153,25 @@ class GlobalWepItem : GlobalItem
         if (IsTool(item) || !IsWeapon(item))
             return base.UseAnimationMultiplier(item, player);
 
+        var config = Config.Instance;
+        var globalMultiplier = config.UseSpeedGlobalMultiplier;
+
         // A value of 4 seems good
-        return Config.Instance.UseSpeedMultiplier;
+        if (IsMagicWeapon(item))
+            return config.UseSpeedMagicMultiplier * globalMultiplier;
+        else if (IsMeleeWeapon(item))
+            return config.UseSpeedMeleeMultiplier * globalMultiplier;
+        else if (IsRangedWeapon(item))
+            return config.UseSpeedRangedMultiplier * globalMultiplier;
+        else if (IsSummonWeapon(item))
+            return config.UseSpeedSummonMultiplier * globalMultiplier;
+        else if (IsThrownWeapon(item))
+            return config.UseSpeedThrownMultiplier * globalMultiplier;
+
+        return base.UseSpeedMultiplier(item, player);
     }
 
-    public override float UseAnimationMultiplier(Item item, Player player)
+    /*public override float UseAnimationMultiplier(Item item, Player player)
     {
         var blacklist = new short[]
         {
@@ -172,7 +200,13 @@ class GlobalWepItem : GlobalItem
             return base.UseAnimationMultiplier(item, player);
 
         return config.UseAnimationMultiplier;
-    }
+    }*/
+
+    static bool IsMagicWeapon(Item item) => item.CountsAsClass(DamageClass.Magic);
+    static bool IsMeleeWeapon(Item item) => item.CountsAsClass(DamageClass.Melee);
+    static bool IsRangedWeapon(Item item) => item.CountsAsClass(DamageClass.Ranged);
+    static bool IsSummonWeapon(Item item) => item.CountsAsClass(DamageClass.Summon);
+    static bool IsThrownWeapon(Item item) => item.CountsAsClass(DamageClass.Throwing);
 
     static bool IsWeapon(Item item) => item.damage > 0;
 

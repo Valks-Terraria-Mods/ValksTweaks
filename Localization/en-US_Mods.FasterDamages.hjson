@@ -1,7 +1,11 @@
 Configs: {
 	FasterDamagesConfig: {
 		DisplayName: Faster Weapons Config
-		Headers.Speed: Speed Header
+
+		Headers: {
+			Speed: Speed Header
+			Test: Test Header
+		}
 
 		WeaponSpeed: {
 			Label: Weapon Speed
@@ -120,6 +124,66 @@ Configs: {
 
 		PickupRangeMultiplier: {
 			Label: Pickup Range Multiplier
+			Tooltip: ""
+		}
+
+		UseSpeedGlobalMultiplier: {
+			Label: Use Speed Global Multiplier
+			Tooltip: ""
+		}
+
+		UseSpeedMeleeMultiplier: {
+			Label: Use Speed Melee Multiplier
+			Tooltip: ""
+		}
+
+		UseSpeedRangedMultiplier: {
+			Label: Use Speed Ranged Multiplier
+			Tooltip: ""
+		}
+
+		UseSpeedMagicMultiplier: {
+			Label: Use Speed Magic Multiplier
+			Tooltip: ""
+		}
+
+		UseSpeedSummonMultiplier: {
+			Label: Use Speed Summon Multiplier
+			Tooltip: ""
+		}
+
+		UseSpeedThrownMultiplier: {
+			Label: Use Speed Thrown Multiplier
+			Tooltip: ""
+		}
+
+		UseTimeGlobalMultiplier: {
+			Label: Use Time Global Multiplier
+			Tooltip: ""
+		}
+
+		UseTimeMeleeMultiplier: {
+			Label: Use Time Melee Multiplier
+			Tooltip: ""
+		}
+
+		UseTimeRangedMultiplier: {
+			Label: Use Time Ranged Multiplier
+			Tooltip: ""
+		}
+
+		UseTimeMagicMultiplier: {
+			Label: Use Time Magic Multiplier
+			Tooltip: ""
+		}
+
+		UseTimeSummonMultiplier: {
+			Label: Use Time Summon Multiplier
+			Tooltip: ""
+		}
+
+		UseTimeThrownMultiplier: {
+			Label: Use Time Thrown Multiplier
 			Tooltip: ""
 		}
 	}
