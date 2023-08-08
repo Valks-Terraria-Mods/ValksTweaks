@@ -103,7 +103,7 @@ public class FasterDamagesConfig : ModConfig
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(1)]
-    [Range(1, 100)]
+    [Range(1, int.MaxValue)]
     public int WeaponDamageMultiplier;
 
     [BackgroundColor(0, 0, 0, 200)]
@@ -113,7 +113,7 @@ public class FasterDamagesConfig : ModConfig
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(1)]
-    [Range(1, 100)]
+    [Range(1, int.MaxValue)]
     public int WeaponKnockbackMultiplier;
 
     [BackgroundColor(0, 0, 0, 200)]

@@ -81,7 +81,7 @@ class GlobalWepItem : GlobalItem
 
     public override void ModifyWeaponDamage(Item item, Player player, ref StatModifier damage)
     {
-        damage.Flat *= Config.Instance.WeaponDamageMultiplier;
+        damage *= Config.Instance.WeaponDamageMultiplier;
     }
 
     public override void ModifyWeaponCrit(Item item, Player player, ref float crit)
@@ -91,7 +91,7 @@ class GlobalWepItem : GlobalItem
 
     public override void ModifyWeaponKnockback(Item item, Player player, ref StatModifier knockback)
     {
-        knockback.Flat *= Config.Instance.WeaponKnockbackMultiplier;
+        knockback *= Config.Instance.WeaponKnockbackMultiplier;
     }
 
     public override void ModifyItemScale(Item item, Player player, ref float scale)

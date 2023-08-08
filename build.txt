@@ -1,4 +1,4 @@
 author = valkyrienyanko, convicted tomatophile (Stevie)
-version = 3.0.14
+version = 3.0.15
 displayName = Faster Weapons
 homepage = https://discord.gg/866cg8yfxZ
