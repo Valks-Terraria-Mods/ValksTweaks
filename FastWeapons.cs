@@ -220,6 +220,18 @@ class GlobalWepProjectile : GlobalProjectile
 
     public override void OnSpawn(Projectile projectile, IEntitySource source)
     {
+        var blacklistedAIStyles = new short[]
+        {
+            ProjAIStyleID.Hook,
+            ProjAIStyleID.FallingTile,
+            ProjAIStyleID.FallingStar,
+            ProjAIStyleID.FallingStarAnimation
+        };
+
+        foreach (var style in blacklistedAIStyles)
+            if (projectile.aiStyle == style)
+                return;
+
         if (projectile.owner != Main.myPlayer)
             return;
 
