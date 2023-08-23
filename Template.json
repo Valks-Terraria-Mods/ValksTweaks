@@ -7,281 +7,449 @@
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 36,
+      "TileFrameY": 54,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 90,
+      "TileFrameY": 18,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 126,
+      "TileFrameY": 54,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 10,
+      "TileFrameX": 18,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 10,
+      "TileFrameX": 18,
+      "TileFrameY": 18,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 10,
+      "TileFrameX": 36,
+      "TileFrameY": 36,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 72,
+      "TileFrameY": 54,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 108,
+      "TileFrameY": 72,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 4,
+      "TileFrameX": 22,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 18,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 108,
+      "TileFrameY": 72,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 15,
+      "TileFrameX": 18,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 15,
+      "TileFrameX": 18,
+      "TileFrameY": 18,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 18,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 36,
+      "TileFrameY": 0,
+      "Slope": 0,
+      "HasTile": true
+    },
+    {
+      "WallType": 4,
+      "TileType": 30,
+      "TileFrameX": 72,
+      "TileFrameY": 72,
+      "Slope": 4,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
-      "HasTile": false
-    },
-    {
-      "WallType": 4,
-      "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 18,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 18,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 36,
+      "TileFrameY": 0,
+      "Slope": 0,
+      "HasTile": true
+    },
+    {
+      "WallType": 4,
+      "TileType": 30,
+      "TileFrameX": 18,
+      "TileFrameY": 72,
+      "Slope": 3,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
-      "HasTile": false
-    },
-    {
-      "WallType": 4,
-      "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 4,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 18,
+      "TileFrameX": 18,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 18,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 126,
+      "TileFrameY": 72,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
-      "TileType": 0,
-      "HasTile": false
+      "TileType": 15,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
+      "HasTile": true
     },
     {
       "WallType": 4,
-      "TileType": 0,
-      "HasTile": false
-    },
-    {
-      "WallType": 0,
-      "TileType": 30,
+      "TileType": 15,
+      "TileFrameX": 0,
+      "TileFrameY": 18,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 54,
+      "TileFrameY": 0,
+      "Slope": 0,
+      "HasTile": true
+    },
+    {
+      "WallType": 0,
+      "TileType": 30,
+      "TileFrameX": 126,
+      "TileFrameY": 72,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 4,
+      "TileFrameX": 44,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 4,
       "TileType": 0,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": false
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 54,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 54,
+      "TileFrameY": 54,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 90,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 144,
+      "TileFrameY": 54,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 10,
+      "TileFrameX": 0,
+      "TileFrameY": 0,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 10,
+      "TileFrameX": 0,
+      "TileFrameY": 18,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 10,
+      "TileFrameX": 18,
+      "TileFrameY": 36,
+      "Slope": 0,
       "HasTile": true
     },
     {
       "WallType": 0,
       "TileType": 30,
+      "TileFrameX": 18,
+      "TileFrameY": 54,
+      "Slope": 0,
       "HasTile": true
     }
   ]

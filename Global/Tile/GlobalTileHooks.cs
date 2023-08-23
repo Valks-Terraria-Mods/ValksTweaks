@@ -16,4 +16,11 @@ public class GlobalTileHooks : GlobalTile
             Debug.BottomRight = new Vector2I(i, j);
         }
     }
+
+    public override void RightClick(int i, int j, int type)
+    {
+        Tile tile = Main.tile[i, j];
+
+        Main.NewText(tile.TileFrameX);
+    }
 }

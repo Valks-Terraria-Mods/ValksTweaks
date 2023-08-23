@@ -3,6 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using Terraria.ID;
+using Terraria;
 
 namespace ValksTweaks.Content.Items;
 
@@ -38,15 +39,11 @@ public class House : ModItem
 
         int index = 0;
 
-        int[] furnitureIds = { 
-            TileID.WorkBenches,
-            TileID.Torches,
-            TileID.OpenDoor,
-            TileID.ClosedDoor,
-            TileID.Chairs
-        };
-
-        List<FurnitureTile> furnitureTiles = new();
+        List<FurnitureTile> workbenches = new();
+        List<FurnitureTile> chairs = new();
+        List<FurnitureTile> doors = new();
+        List<FurnitureTile> torches = new();
+        List<FurnitureTile> tables = new();
 
         for (int i = 0; i < size.X; i++)
         {
@@ -61,20 +58,44 @@ public class House : ModItem
                 WorldGen.PlaceWall(x, y, tile.WallType, false);
 
                 // Do not place furniture tiles just yet
-                if (furnitureIds.Contains(tile.TileType))
+                if (tile.TileType is TileID.Chairs)
                 {
-                    furnitureTiles.Add(new FurnitureTile
-                    {
-                        Position = new Vector2I(x, y),
-                        TileFrameX = tile.TileFrameX,
-                        Id = tile.TileType
-                    });
+                    AddFurnitureTiles(ref chairs, x, y, tile);
+                    continue;
+                }
+
+                if (tile.TileType is TileID.WorkBenches)
+                {
+                    AddFurnitureTiles(ref workbenches, x, y, tile);
+                    continue;
+                }
+
+                if (tile.TileType is TileID.OpenDoor or TileID.ClosedDoor)
+                {
+                    AddFurnitureTiles(ref doors, x, y, tile);
+                    continue;
+                }
+
+                if (tile.TileType is TileID.Torches)
+                {
+                    AddFurnitureTiles(ref torches, x, y, tile);
+                    continue;
+                }
+
+                if (tile.TileType is TileID.Tables)
+                {
+                    AddFurnitureTiles(ref tables, x, y, tile);
                     continue;
                 }
 
                 // Place tiles
-                WorldGen.SlopeTile(x, y, tile.Slope);
                 WorldGen.PlaceTile(x, y, tile.TileType, true, true);
+                WorldGen.SlopeTile(x, y, tile.Slope);
+
+                // WorldGen.PlaceTile(...) overwrites the TileFrameX so that is why
+                // this is set after
+                Main.tile[x, y].TileFrameX = (short)tile.TileFrameX;
+                Main.tile[x, y].TileFrameY = (short)tile.TileFrameY;
 
                 // Remove empty tiles
                 if (!tile.HasTile)
@@ -82,34 +103,62 @@ public class House : ModItem
             }
         }
 
-        // Place furniture tiles
-        foreach (var tile in furnitureTiles)
-        {
-            //WorldGen.SlopeTile(tile.Position.X, tile.Position.Y, (int)SlopeType.Solid);
+        // Otherwise chairs will not be placed properly
+        chairs.Reverse();
 
-            // Open doors break surrounding tiles when placed in the world
-            if (tile.Id == TileID.OpenDoor)
-                tile.Id = TileID.ClosedDoor;
-
-            Main.tile[tile.Position.X, tile.Position.Y].TileFrameX = (short)tile.TileFrameX;
-            WorldGen.PlaceTile(tile.Position.X, tile.Position.Y, tile.Id, true, true);
-        }
+        PlaceFurnitureTiles(chairs);
+        PlaceFurnitureTiles(workbenches);
+        PlaceFurnitureTiles(doors);
+        PlaceFurnitureTiles(torches);
+        PlaceFurnitureTiles(tables);
 
         return false;
     }
 
-    public override void AddRecipes()
+    void AddFurnitureTiles(ref List<FurnitureTile> furniture, int x, int y, TileInfo tile)
+    {
+        furniture.Add(new FurnitureTile
+        {
+            Position = new Vector2I(x, y),
+            TileFrameX = tile.TileFrameX,
+            TileFrameY = tile.TileFrameY,
+            Id = tile.TileType
+        });
+    }
+
+    void PlaceFurnitureTiles(List<FurnitureTile> furniture)
+    {
+        foreach (var tile in furniture)
+        {
+            // Open doors break surrounding tiles when placed in the world
+            if (tile.Id == TileID.OpenDoor)
+                tile.Id = TileID.ClosedDoor;
+
+            int x = tile.Position.X;
+            int y = tile.Position.Y;
+
+            WorldGen.PlaceTile(x, y, tile.Id, mute: true, forced: true);
+
+            // WorldGen.PlaceTile(...) overwrites the TileFrameX so that is why
+            // this is set after
+            Main.tile[x, y].TileFrameX = (short)tile.TileFrameX;
+            Main.tile[x, y].TileFrameY = (short)tile.TileFrameY;
+        }
+    }
+
+    /*public override void AddRecipes()
     {
         CreateRecipe()
-            .AddIngredient(ItemID.CopperCoin)
+            .AddIngredient(ItemID.Wood, 100)
             .AddTile(TileID.WorkBenches)
             .Register();
-    }
+    }*/
 }
 
 public class FurnitureTile
 {
     public Vector2I Position { get; set; }
     public int TileFrameX { get; set; }
+    public int TileFrameY { get; set; }
     public int Id { get; set; }
 }

@@ -34,6 +34,7 @@ public class CommandDebug : ModCommand
                     WallType = tile.WallType,
                     TileType = tile.TileType,
                     TileFrameX = tile.TileFrameX,
+                    TileFrameY = tile.TileFrameY,
                     Slope = (int)tile.Slope,
                     HasTile = tile.HasTile
                 });
@@ -81,6 +82,7 @@ public class TileInfo
     public int WallType { get; set; }
     public int TileType { get; set; }
     public int TileFrameX { get; set; }
+    public int TileFrameY { get; set; }
     public int Slope { get; set; }
     public bool HasTile { get; set; }
 }
