@@ -1,0 +1,159 @@
+Mods: {
+	ValksTweaks: {
+		Configs: {
+			Config: {
+				DisplayName: Config
+
+				AreToolsEffected: {
+					Label: Are Tools Effected
+					Tooltip: ""
+				}
+
+				GoblinReforgeCostMultiplier: {
+					Label: Goblin Reforge Cost Multiplier
+					Tooltip: ""
+				}
+
+				HorizontalWingSpeedMultiplier: {
+					Label: Horizontal Wing Speed Multiplier
+					Tooltip: ""
+				}
+
+				HorizontalWingAccelerationMultiplier: {
+					Label: Horizontal Wing Acceleration Multiplier
+					Tooltip: ""
+				}
+
+				PickupRangeMultiplier: {
+					Label: Pickup Range Multiplier
+					Tooltip: ""
+				}
+
+				InfiniteAmmo: {
+					Label: Infinite Ammo
+					Tooltip: ""
+				}
+
+				AllProjectilesIgnoreCollision: {
+					Label: All Projectiles Ignore Collision
+					Tooltip: ""
+				}
+
+				RandomProjectileType: {
+					Label: Random Projectile Type
+					Tooltip: ""
+				}
+
+				ProjectileType: {
+					Label: Projectile Type
+					Tooltip: ""
+				}
+
+				ProjectileVelocityMultiplier: {
+					Label: Projectile Velocity Multiplier
+					Tooltip: ""
+				}
+
+				AdditionalProjectilesLeft: {
+					Label: Additional Projectiles Left
+					Tooltip: ""
+				}
+
+				AdditionalProjectilesRight: {
+					Label: Additional Projectiles Right
+					Tooltip: ""
+				}
+
+				AdditionalProjectileHorizontalSpacing: {
+					Label: Additional Projectile Horizontal Spacing
+					Tooltip: ""
+				}
+
+				UseSpeedGlobalMultiplier: {
+					Label: Use Speed Global Multiplier
+					Tooltip: ""
+				}
+
+				UseSpeedMeleeMultiplier: {
+					Label: Use Speed Melee Multiplier
+					Tooltip: ""
+				}
+
+				UseSpeedRangedMultiplier: {
+					Label: Use Speed Ranged Multiplier
+					Tooltip: ""
+				}
+
+				UseSpeedMagicMultiplier: {
+					Label: Use Speed Magic Multiplier
+					Tooltip: ""
+				}
+
+				UseSpeedSummonMultiplier: {
+					Label: Use Speed Summon Multiplier
+					Tooltip: ""
+				}
+
+				UseSpeedThrownMultiplier: {
+					Label: Use Speed Thrown Multiplier
+					Tooltip: ""
+				}
+
+				UseTimeGlobalMultiplier: {
+					Label: Use Time Global Multiplier
+					Tooltip: ""
+				}
+
+				UseTimeMeleeMultiplier: {
+					Label: Use Time Melee Multiplier
+					Tooltip: ""
+				}
+
+				UseTimeRangedMultiplier: {
+					Label: Use Time Ranged Multiplier
+					Tooltip: ""
+				}
+
+				UseTimeMagicMultiplier: {
+					Label: Use Time Magic Multiplier
+					Tooltip: ""
+				}
+
+				UseTimeSummonMultiplier: {
+					Label: Use Time Summon Multiplier
+					Tooltip: ""
+				}
+
+				UseTimeThrownMultiplier: {
+					Label: Use Time Thrown Multiplier
+					Tooltip: ""
+				}
+
+				AllWeaponAutoReuse: {
+					Label: All Weapon Auto Reuse
+					Tooltip: ""
+				}
+
+				WeaponDamageMultiplier: {
+					Label: Weapon Damage Multiplier
+					Tooltip: ""
+				}
+
+				WeaponCritMultiplier: {
+					Label: Weapon Crit Multiplier
+					Tooltip: ""
+				}
+
+				WeaponKnockbackMultiplier: {
+					Label: Weapon Knockback Multiplier
+					Tooltip: ""
+				}
+
+				ItemScaleMultiplier: {
+					Label: Item Scale Multiplier
+					Tooltip: ""
+				}
+			}
+		}
+	}
+}

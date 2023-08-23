@@ -1,4 +1,4 @@
-author = valkyrienyanko, convicted tomatophile (Stevie)
-version = 3.0.16
-displayName = Faster Weapons
+author = valkyrienyanko
+version = 3.0.17
+displayName = Valks Tweaks
 homepage = https://discord.gg/866cg8yfxZ
