@@ -66,13 +66,13 @@ public class House : ModItem
                     furnitureTiles.Add(new FurnitureTile
                     {
                         Position = new Vector2I(x, y),
+                        TileFrameX = tile.TileFrameX,
                         Id = tile.TileType
                     });
                     continue;
                 }
 
                 // Place tiles
-                Main.tile[x, y].TileFrameX = (short)tile.TileFrameX;
                 WorldGen.SlopeTile(x, y, tile.Slope);
                 WorldGen.PlaceTile(x, y, tile.TileType, true, true);
 
@@ -91,6 +91,7 @@ public class House : ModItem
             if (tile.Id == TileID.OpenDoor)
                 tile.Id = TileID.ClosedDoor;
 
+            Main.tile[tile.Position.X, tile.Position.Y].TileFrameX = (short)tile.TileFrameX;
             WorldGen.PlaceTile(tile.Position.X, tile.Position.Y, tile.Id, true, true);
         }
 
@@ -109,5 +110,6 @@ public class House : ModItem
 public class FurnitureTile
 {
     public Vector2I Position { get; set; }
+    public int TileFrameX { get; set; }
     public int Id { get; set; }
 }
