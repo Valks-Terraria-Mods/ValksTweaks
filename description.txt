@@ -1,3 +1,5 @@
+Currently working on adding insta-build houses.
+
 This mod has several config options
 - Use Time Multiplier (lower values means faster fire rates)
 - Use Speed Multiplier (how fast the weapon art animation is played)
