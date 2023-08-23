@@ -27,11 +27,16 @@ public class CommandDebug : ModCommand
         {
             for (int y = topLeft.Y + 1; y < topLeft.Y + diffY; y++)
             {
-                if (Main.tile[x, y].HasTile)
-                    template.TileTypes.Add(Main.tile[x, y].TileType);
-                else
-                    // Use -1 to represent empty tiles
-                    template.TileTypes.Add(-1);
+                Tile tile = Main.tile[x, y];
+
+                template.Tiles.Add(new TileInfo
+                {
+                    WallType = tile.WallType,
+                    TileType = tile.TileType,
+                    TileFrameX = tile.TileFrameX,
+                    Slope = (int)tile.Slope,
+                    HasTile = tile.HasTile
+                });
             }
         }
 
@@ -68,5 +73,14 @@ public class CommandDebug : ModCommand
 public class Template
 {
     public Vector2I Size { get; set; }
-    public List<int> TileTypes { get; set; } = new();
+    public List<TileInfo> Tiles { get; set; } = new();
+}
+
+public class TileInfo
+{
+    public int WallType { get; set; }
+    public int TileType { get; set; }
+    public int TileFrameX { get; set; }
+    public int Slope { get; set; }
+    public bool HasTile { get; set; }
 }

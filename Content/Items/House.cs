@@ -41,44 +41,56 @@ public class House : ModItem
         int[] furnitureIds = { 
             TileID.WorkBenches,
             TileID.Torches,
+            TileID.OpenDoor,
             TileID.ClosedDoor,
             TileID.Chairs
         };
 
         List<FurnitureTile> furnitureTiles = new();
 
-        for (int x = 0; x < size.X; x++)
+        for (int i = 0; i < size.X; i++)
         {
-            for (int y = 0; y < size.Y; y++)
+            for (int j = 0; j < size.Y; j++)
             {
-                int tileId = template.TileTypes[index++];
+                TileInfo tile = template.Tiles[index++];
 
-                if (furnitureIds.Contains(tileId))
+                int x = startPos.X + i;
+                int y = startPos.Y + j;
+
+                // Place walls
+                WorldGen.PlaceWall(x, y, tile.WallType, false);
+
+                // Do not place furniture tiles just yet
+                if (furnitureIds.Contains(tile.TileType))
                 {
                     furnitureTiles.Add(new FurnitureTile
                     {
-                        Position = new Vector2I(startPos.X + x, startPos.Y + y),
-                        Id = tileId
+                        Position = new Vector2I(x, y),
+                        Id = tile.TileType
                     });
                     continue;
                 }
 
-                // Empty tile
-                if (tileId == -1)
-                {
-                    Main.tile[startPos.X + x, startPos.Y + y].ClearTile();
-                }
-                else
-                {
-                    WorldGen.SlopeTile(startPos.X + x, startPos.Y + y, (int)SlopeType.Solid);
-                    WorldGen.PlaceTile(startPos.X + x, startPos.Y + y, tileId, true, true);
-                }
+                // Place tiles
+                Main.tile[x, y].TileFrameX = (short)tile.TileFrameX;
+                WorldGen.SlopeTile(x, y, tile.Slope);
+                WorldGen.PlaceTile(x, y, tile.TileType, true, true);
+
+                // Remove empty tiles
+                if (!tile.HasTile)
+                    Main.tile[x, y].ClearTile();
             }
         }
 
+        // Place furniture tiles
         foreach (var tile in furnitureTiles)
         {
-            WorldGen.SlopeTile(tile.Position.X, tile.Position.Y, (int)SlopeType.Solid);
+            //WorldGen.SlopeTile(tile.Position.X, tile.Position.Y, (int)SlopeType.Solid);
+
+            // Open doors break surrounding tiles when placed in the world
+            if (tile.Id == TileID.OpenDoor)
+                tile.Id = TileID.ClosedDoor;
+
             WorldGen.PlaceTile(tile.Position.X, tile.Position.Y, tile.Id, true, true);
         }
 
