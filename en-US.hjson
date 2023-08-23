@@ -155,5 +155,27 @@ Mods: {
 				}
 			}
 		}
+
+		Items: {
+			HouseItem: {
+				DisplayName: House Item
+				Tooltip: ""
+			}
+
+			House: {
+				DisplayName: House
+				Tooltip: ""
+			}
+
+			DebugBottomRight: {
+				DisplayName: Debug Bottom Right
+				Tooltip: ""
+			}
+
+			DebugTopLeft: {
+				DisplayName: Debug Top Left
+				Tooltip: ""
+			}
+		}
 	}
 }

@@ -28,4 +28,4 @@ More features may be added later on.
 
 If you know of any bugs or have any ideas please tell me in the discord https://discord.gg/866cg8yfxZ
 
-Source: https://github.com/Valks-Terraria-Mods/FasterDamages (all contributions welcome)
+Source: https://github.com/Valks-Terraria-Mods/ValksTweaks (all contributions welcome)

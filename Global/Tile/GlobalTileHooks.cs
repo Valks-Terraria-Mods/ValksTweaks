@@ -1,0 +1,19 @@
+﻿namespace ValksTweaks;
+
+public class GlobalTileHooks : GlobalTile
+{
+    public override void PlaceInWorld(int i, int j, int type, Item item)
+    {
+        if (type == ModContent.TileType<Content.Tiles.DebugTopLeft>())
+        {
+            Main.NewText("Set top left position");
+            Debug.TopLeft = new Vector2I(i, j);
+        }
+
+        if (type == ModContent.TileType<Content.Tiles.DebugBottomRight>())
+        {
+            Main.NewText("Set bottom right position");
+            Debug.BottomRight = new Vector2I(i, j);
+        }
+    }
+}
