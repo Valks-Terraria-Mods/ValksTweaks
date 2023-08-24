@@ -24,17 +24,17 @@ public class House : ModItem
         Stream stream = ModContent.GetInstance<ValksTweaks>().GetFileStream("Template.json");
         using StreamReader reader = new(stream);
         string json = reader.ReadToEnd();
-        Template template = JsonSerializer.Deserialize<Template>(json);
+        Schematic schematic = JsonSerializer.Deserialize<Schematic>(json);
 
-        //Template template = Debug.Template;
+        //Schematic schematic = Debug.Template;
 
-        if (template == null)
+        if (schematic == null)
         {
             Main.NewText("Template not set");
             return false;
         }
 
-        Vector2I size = template.Size;
+        Vector2I size = schematic.Size;
 
         Vector2I startPos = new(
             (int)Main.MouseWorld.X / 16,
@@ -47,7 +47,7 @@ public class House : ModItem
         // Prepare the furniture dictionary
         for (int i = 0; i < size.X * size.Y; i++)
         {
-            TileInfo tileInfo = template.Tiles[i];
+            TileInfo tileInfo = schematic.Tiles[i];
             int tileId = tileInfo.TileType;
 
             if (IsFurnitureTile(tileId) && !furniture.ContainsKey(tileId))
@@ -58,7 +58,7 @@ public class House : ModItem
         {
             for (int j = 0; j < size.Y; j++)
             {
-                TileInfo tileInfo = template.Tiles[index++];
+                TileInfo tileInfo = schematic.Tiles[index++];
 
                 int x = startPos.X + i;
                 int y = startPos.Y + j;

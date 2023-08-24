@@ -18,7 +18,7 @@ public class CommandDebug : ModCommand
         int diffX = botRight.X - topLeft.X;
         int diffY = botRight.Y - topLeft.Y;
 
-        Template template = new()
+        Schematic schematic = new()
         {
             Size = new Vector2I(diffX - 1, diffY - 1)
         };
@@ -29,7 +29,7 @@ public class CommandDebug : ModCommand
             {
                 Tile tile = Main.tile[x, y];
 
-                template.Tiles.Add(new TileInfo
+                schematic.Tiles.Add(new TileInfo
                 {
                     WallType = tile.WallType,
                     TileType = tile.TileType,
@@ -41,9 +41,9 @@ public class CommandDebug : ModCommand
             }
         }
 
-        Debug.Template = template;
+        Debug.Template = schematic;
 
-        string json = JsonSerializer.Serialize(template, new JsonSerializerOptions
+        string json = JsonSerializer.Serialize(schematic, new JsonSerializerOptions
         {
             WriteIndented = true
         });
@@ -71,7 +71,7 @@ public class CommandDebug : ModCommand
     }
 }
 
-public class Template
+public class Schematic
 {
     public Vector2I Size { get; set; }
     public List<TileInfo> Tiles { get; set; } = new();
