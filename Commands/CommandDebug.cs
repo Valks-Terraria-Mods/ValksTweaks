@@ -85,4 +85,5 @@ public class TileInfo
     public int TileFrameY { get; set; }
     public int Slope { get; set; }
     public bool HasTile { get; set; }
+    public Vector2I Position { get; set; }
 }
