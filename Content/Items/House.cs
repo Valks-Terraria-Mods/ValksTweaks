@@ -1,6 +1,5 @@
 ﻿using System.Text.Json;
 using System.IO;
-using System.Collections.Generic;
 
 namespace ValksTweaks.Content.Items;
 

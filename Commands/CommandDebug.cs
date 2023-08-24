@@ -1,5 +1,4 @@
 ﻿using System.Text.Json;
-using System.Collections.Generic;
 using System.IO;
 using System.Diagnostics;
 
@@ -69,21 +68,4 @@ public class CommandDebug : ModCommand
 
         Main.NewText("Saved template");
     }
-}
-
-public class Schematic
-{
-    public Vector2I Size { get; set; }
-    public List<TileInfo> Tiles { get; set; } = new();
-}
-
-public class TileInfo
-{
-    public int WallType { get; set; }
-    public int TileType { get; set; }
-    public int TileFrameX { get; set; }
-    public int TileFrameY { get; set; }
-    public int Slope { get; set; }
-    public bool HasTile { get; set; }
-    public Vector2I Position { get; set; }
 }
