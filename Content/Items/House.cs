@@ -20,19 +20,41 @@ public class House : ModItem
 
     public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
     {
-        Stream stream = ModContent.GetInstance<ValksTweaks>().GetFileStream("Template.json");
-        using StreamReader reader = new(stream);
-        string json = reader.ReadToEnd();
-        Schematic schematic = JsonSerializer.Deserialize<Schematic>(json);
-
-        //Schematic schematic = Debug.Template;
+        Schematic schematic = LoadSchematic("House1");
 
         if (schematic == null)
         {
-            Main.NewText("Template not set");
+            Main.NewText("Schematic is null");
             return false;
         }
 
+        PasteSchematic(schematic, style: 0);
+
+        return false;
+    }
+
+    public override void AddRecipes()
+    {
+        CreateRecipe()
+            .AddIngredient(ItemID.Wood, 100)
+            .AddTile(TileID.WorkBenches)
+            .Register();
+    }
+
+    Schematic LoadSchematic(string fileName)
+    {
+        Stream stream = ModContent
+            .GetInstance<ValksTweaks>()
+            .GetFileStream($"{fileName}.json");
+        
+        using StreamReader reader = new(stream);
+        string json = reader.ReadToEnd();
+
+        return JsonSerializer.Deserialize<Schematic>(json);
+    }
+
+    void PasteSchematic(Schematic schematic, int style = 0)
+    {
         Vector2I size = schematic.Size;
 
         Vector2I startPos = new(
@@ -79,34 +101,24 @@ public class House : ModItem
                 }
 
                 // Place solid tiles
-                PlaceTile(x, y, tileInfo);
+                PlaceTile(x, y, tileInfo, style);
             }
         }
 
-        AddFurnitureTiles(furniture);
-
-        return false;
+        AddFurnitureTiles(furniture, style);
     }
 
-    /*public override void AddRecipes()
-    {
-        CreateRecipe()
-            .AddIngredient(ItemID.Wood, 100)
-            .AddTile(TileID.WorkBenches)
-            .Register();
-    }*/
-
-    void AddFurnitureTiles(Dictionary<int, List<TileInfo>> furniture)
+    void AddFurnitureTiles(Dictionary<int, List<TileInfo>> furniture, int style = 0)
     {
         // Otherwise chairs will not be placed properly
         furniture[TileID.Chairs].Reverse();
 
         foreach (List<TileInfo> furnitureList in furniture.Values)
             foreach (TileInfo tileInfo in furnitureList)
-                AddFurnitureTile(tileInfo);
+                AddFurnitureTile(tileInfo, style);
     }
 
-    void AddFurnitureTile(TileInfo tileInfo)
+    void AddFurnitureTile(TileInfo tileInfo, int style = 0)
     {
         // Open doors break surrounding tiles when placed in the world
         ReplaceTile(tileInfo, TileID.OpenDoor, TileID.ClosedDoor);
@@ -116,7 +128,7 @@ public class House : ModItem
         int x = tileInfo.Position.X;
         int y = tileInfo.Position.Y;
 
-        PlaceTile(x, y, tileInfo);
+        PlaceTile(x, y, tileInfo, style);
     }
 
     void ReplaceTile(TileInfo tileInfo, int oldTile, int newTile)
@@ -125,11 +137,13 @@ public class House : ModItem
             tileInfo.TileType = newTile;
     }
 
-    void PlaceTile(int x, int y, TileInfo tileInfo)
+    void PlaceTile(int x, int y, TileInfo tileInfo, int style = 0)
     {
         WorldGen.PlaceTile(x, y, tileInfo.TileType,
             mute: true,
-            forced: true);
+            forced: true,
+            plr: -1,
+            style: style);
 
         WorldGen.SlopeTile(x, y, tileInfo.Slope);
 

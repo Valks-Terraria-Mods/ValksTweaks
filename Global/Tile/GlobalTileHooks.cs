@@ -6,21 +6,18 @@ public class GlobalTileHooks : GlobalTile
     {
         if (type == ModContent.TileType<Content.Tiles.DebugTopLeft>())
         {
+            ModContent.GetInstance<CmdSave>().TopLeft = 
+                new Vector2I(i, j);
+
             Main.NewText("Set top left position");
-            Debug.TopLeft = new Vector2I(i, j);
         }
 
         if (type == ModContent.TileType<Content.Tiles.DebugBottomRight>())
         {
+            ModContent.GetInstance<CmdSave>().BottomRight = 
+                new Vector2I(i, j);
+
             Main.NewText("Set bottom right position");
-            Debug.BottomRight = new Vector2I(i, j);
         }
-    }
-
-    public override void RightClick(int i, int j, int type)
-    {
-        Tile tile = Main.tile[i, j];
-
-        Main.NewText(tile.TileFrameX);
     }
 }
