@@ -53,8 +53,6 @@ public class CommandDebug : ModCommand
 
         File.WriteAllText(savePath + "/Template.json", json);
 
-        //string readText = File.ReadAllText(savePath + "/Template.json");
-
         // Open the folder containing the tile save data
         if (Directory.Exists(savePath))
         {
