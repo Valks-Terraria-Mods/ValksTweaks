@@ -1,13 +1,5 @@
 ﻿namespace ValksTweaks;
 
-internal class Test : GlobalTile
-{
-    public override void RightClick(int i, int j, int type)
-    {
-        //Main.NewText(type);
-    }
-}
-
 internal partial class ItemTweaks
 {
     public override void HorizontalWingSpeeds(Item item, Player player, ref float speed, ref float acceleration)

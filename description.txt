@@ -1,6 +1,6 @@
-Currently working on adding insta-build houses.
+Welcome to "Valks Tweaks" mod, formely known as "Faster Weapons" mod.
 
-This mod has several config options
+[h1]Config[/h1]
 - Use Time Multiplier (lower values means faster fire rates)
 - Use Speed Multiplier (how fast the weapon art animation is played)
 - All Weapons Auto Reuse (no more manual clicking for items)
@@ -16,8 +16,6 @@ This mod has several config options
 - Additional Projectiles Left (shoot more projectiles on your left)
 - Additional Projectiles Right (shoot more projectiles on your right)
 - Additional Projectile Horizontal Spacing (how far apart additional projectiles are from each other)
-
-Other config options not related to weapons that I decided to add anyways
 - Are Tools Effected (if true tools will be affected by all config values)
 - Goblin Reforge Cost Multiplier (modify forge costs, set to 0 for free reforges)
 - Horizontal Wing Speed Multiplier
@@ -30,4 +28,6 @@ More features may be added later on.
 
 If you know of any bugs or have any ideas please tell me in the discord https://discord.gg/866cg8yfxZ
 
-Source: https://github.com/Valks-Terraria-Mods/ValksTweaks (all contributions welcome)
+Source: https://github.com/Valks-Terraria-Mods/ValksTweaks
+
+My Other Mods: https://steamcommunity.com/sharedfiles/filedetails/?id=3025618564
