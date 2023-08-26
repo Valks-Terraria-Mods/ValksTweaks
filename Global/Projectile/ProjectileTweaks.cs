@@ -2,12 +2,36 @@
 
 public class ProjectileTweaks
 {
+    static readonly HashSet<int> tombstoneProjectileIds = new()
+    {
+        ProjectileID.Tombstone,
+        ProjectileID.GraveMarker,
+        ProjectileID.CrossGraveMarker,
+        ProjectileID.Headstone,
+        ProjectileID.Gravestone,
+        ProjectileID.Obelisk,
+        ProjectileID.RichGravestone1,
+        ProjectileID.RichGravestone2,
+        ProjectileID.RichGravestone3,
+        ProjectileID.RichGravestone4,
+        ProjectileID.RichGravestone5
+    };
+
     class GlobalWepProjectile : GlobalProjectile
     {
         static bool spawningProjectiles;
 
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
+            var config = Config.Instance;
+
+            if (config.DisablePlayerTombstones && 
+                tombstoneProjectileIds.Contains(projectile.type))
+            {
+                projectile.active = false;
+                return;
+            }
+
             var blacklistedAIStyles = new short[]
             {
                 ProjAIStyleID.Hook,
@@ -28,8 +52,6 @@ public class ProjectileTweaks
                 return;
 
             spawningProjectiles = true;
-
-            var config = Config.Instance;
 
             // Spawn the additional projectiles on right
             var posRight = projectile.position;

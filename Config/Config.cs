@@ -39,7 +39,15 @@ internal partial class Config : ModConfig
     public int PlayerRespawnTime;
 
     [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(true)]
+    public bool ShouldPlayerRespawnWithFullHealth;
+
+    [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(1f)]
     [Range(1f, 20f)]
     public float ExtractinatorUseSpeedMultiplier;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(false)]
+    public bool DisablePlayerTombstones;
 }

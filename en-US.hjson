@@ -168,6 +168,11 @@ Mods: {
 					Label: Extractinator Use Speed Multiplier
 					Tooltip: ""
 				}
+
+				DisablePlayerTombstones: {
+					Label: Disable Player Tombstones
+					Tooltip: ""
+				}
 			}
 		}
 
