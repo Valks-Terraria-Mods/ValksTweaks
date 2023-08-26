@@ -158,6 +158,16 @@ Mods: {
 					Label: Vein Miner
 					Tooltip: ""
 				}
+
+				PlayerRespawnTime: {
+					Label: Player Respawn Time
+					Tooltip: ""
+				}
+
+				ExtractinatorUseSpeedMultiplier: {
+					Label: Extractinator Use Speed Multiplier
+					Tooltip: ""
+				}
 			}
 		}
 

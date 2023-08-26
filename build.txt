@@ -1,4 +1,4 @@
 author = valkyrienyanko
-version = 3.0.22
+version = 3.0.25
 displayName = Valks Tweaks
 homepage = https://discord.gg/866cg8yfxZ

@@ -33,4 +33,13 @@ internal partial class Config : ModConfig
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(false)]
     public bool VeinMiner;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(5)]
+    public int PlayerRespawnTime;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(1f)]
+    [Range(1f, 20f)]
+    public float ExtractinatorUseSpeedMultiplier;
 }

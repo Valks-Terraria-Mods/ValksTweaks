@@ -94,10 +94,25 @@ internal partial class ItemTweaks
     // This seems to only affect how fast the swing art animation is played
     public override float UseSpeedMultiplier(Item item, Player player)
     {
-        if (IsTool(item) || !IsWeapon(item))
-            return base.UseAnimationMultiplier(item, player);
-
         var config = Config.Instance;
+
+        // Faster extractinator
+        Vector2 mousePos = Main.MouseWorld / 16;
+        int tileType = Main.tile[(int)mousePos.X, (int)mousePos.Y].TileType;
+
+        if (tileType is TileID.Extractinator or TileID.ChlorophyteExtractinator)
+        {
+            if (player.cursorItemIconEnabled)
+            {
+                return base.UseSpeedMultiplier(item, player) * 
+                    config.ExtractinatorUseSpeedMultiplier;
+            }
+        }
+
+        // Faster weapon speeds
+        if (IsTool(item) || !IsWeapon(item))
+            return base.UseSpeedMultiplier(item, player);
+
         var globalMultiplier = config.UseSpeedGlobalMultiplier;
 
         // A value of 4 seems good
