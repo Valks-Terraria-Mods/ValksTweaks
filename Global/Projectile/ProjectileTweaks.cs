@@ -1,6 +1,6 @@
 ﻿namespace ValksTweaks;
 
-internal class ProjectileTweaks
+public class ProjectileTweaks
 {
     class GlobalWepProjectile : GlobalProjectile
     {
@@ -9,12 +9,12 @@ internal class ProjectileTweaks
         public override void OnSpawn(Projectile projectile, IEntitySource source)
         {
             var blacklistedAIStyles = new short[]
-        {
-            ProjAIStyleID.Hook,
-            ProjAIStyleID.FallingTile,
-            ProjAIStyleID.FallingStar,
-            ProjAIStyleID.FallingStarAnimation
-        };
+            {
+                ProjAIStyleID.Hook,
+                ProjAIStyleID.FallingTile,
+                ProjAIStyleID.FallingStar,
+                ProjAIStyleID.FallingStarAnimation
+            };
 
             foreach (var style in blacklistedAIStyles)
                 if (projectile.aiStyle == style)

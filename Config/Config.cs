@@ -29,4 +29,8 @@ internal partial class Config : ModConfig
     [DefaultValue(1f)]
     [Range(1f, 1000f)]
     public int PickupRangeMultiplier;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(false)]
+    public bool VeinMiner;
 }

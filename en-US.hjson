@@ -153,6 +153,11 @@ Mods: {
 					Label: Item Scale Multiplier
 					Tooltip: ""
 				}
+
+				VeinMiner: {
+					Label: Vein Miner
+					Tooltip: ""
+				}
 			}
 		}
 
