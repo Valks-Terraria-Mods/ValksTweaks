@@ -173,6 +173,21 @@ Mods: {
 					Label: Disable Player Tombstones
 					Tooltip: ""
 				}
+
+				ShouldPlayerRespawnWithFullHealth: {
+					Label: Should Player Respawn With Full Health
+					Tooltip: ""
+				}
+
+				PlayerRunAcceleration: {
+					Label: Player Run Acceleration
+					Tooltip: ""
+				}
+
+				PlayerMaxRunSpeed: {
+					Label: Player Max Run Speed
+					Tooltip: ""
+				}
 			}
 		}
 

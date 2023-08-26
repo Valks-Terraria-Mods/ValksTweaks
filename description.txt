@@ -25,6 +25,8 @@ Welcome to "Valks Tweaks" mod, formely known as "Faster Weapons" mod.
 - Player Respawn Time
 - Extractinator Use Speed Multiplier
 - Disable Player Tombstones
+- Player Run Acceleration
+- Player Max Run Speed
 
 Please note that the "Projectile Type" config option has only been tested for the first 6 values. Numbers greater than this may shoot projectiles that either destroy tiles in your world, spawn lava pockets, or it might be just a ordinary arrow or snowball. Please report all projectile values that cause any kind of problems for you, thank you.
 

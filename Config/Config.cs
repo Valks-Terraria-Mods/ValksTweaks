@@ -50,4 +50,12 @@ internal partial class Config : ModConfig
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(false)]
     public bool DisablePlayerTombstones;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(0)]
+    public float PlayerRunAcceleration;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(0)]
+    public int PlayerMaxRunSpeed;
 }
