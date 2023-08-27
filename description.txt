@@ -13,8 +13,10 @@ Welcome to "Valks Tweaks" mod, formely known as "Faster Weapons" mod.
 - Weapon Knockback Multiplier
 - Item Scale Multiplier (larger values means bigger weapons which means weapons cover a larger damage area)
 - Projectile Velocity Multiplier (multiply how fast projectiles will shoot)
-- Additional Projectiles Left (shoot more projectiles on your left)
-- Additional Projectiles Right (shoot more projectiles on your right)
+- Additional Player Projectiles Left
+- Additional Player Projectiles Right
+- Additional Enemy Projectiles Left
+- Additional Enemy Projectiles Right
 - Additional Projectile Horizontal Spacing (how far apart additional projectiles are from each other)
 - Are Tools Effected (if true tools will be affected by all config values)
 - Goblin Reforge Cost Multiplier (modify forge costs, set to 0 for free reforges)

@@ -26,12 +26,22 @@ internal partial class Config
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(0)]
     [Range(0, 100)]
-    public int AdditionalProjectilesLeft;
+    public int AdditionalPlayerProjectilesLeft;
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(0)]
     [Range(0, 100)]
-    public int AdditionalProjectilesRight;
+    public int AdditionalPlayerProjectilesRight;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(0)]
+    [Range(0, 100)]
+    public int AdditionalEnemyProjectilesLeft;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(0)]
+    [Range(0, 100)]
+    public int AdditionalEnemyProjectilesRight;
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(30)]

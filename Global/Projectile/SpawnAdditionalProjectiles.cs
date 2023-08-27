@@ -1,22 +1,7 @@
 ﻿namespace ValksTweaks;
 
-public class ProjectileTweaks
+public class SpawnAdditionalProjectiles
 {
-    static readonly HashSet<int> tombstoneProjectileIds = new()
-    {
-        ProjectileID.Tombstone,
-        ProjectileID.GraveMarker,
-        ProjectileID.CrossGraveMarker,
-        ProjectileID.Headstone,
-        ProjectileID.Gravestone,
-        ProjectileID.Obelisk,
-        ProjectileID.RichGravestone1,
-        ProjectileID.RichGravestone2,
-        ProjectileID.RichGravestone3,
-        ProjectileID.RichGravestone4,
-        ProjectileID.RichGravestone5
-    };
-
     class GlobalWepProjectile : GlobalProjectile
     {
         static bool spawningProjectiles;
@@ -25,13 +10,9 @@ public class ProjectileTweaks
         {
             var config = Config.Instance;
 
-            if (config.DisablePlayerTombstones && 
-                tombstoneProjectileIds.Contains(projectile.type))
-            {
-                projectile.active = false;
-                return;
-            }
-
+            // Hook is blacklisted because it was duplicating the players grappling hooks
+            // Falling tiles is blacklisted otherwise multiple sand tiles will fall
+            // Falling stars is blacklisted otherwise multiple stars will fall at night
             var blacklistedAIStyles = new short[]
             {
                 ProjAIStyleID.Hook,
@@ -44,7 +25,29 @@ public class ProjectileTweaks
                 if (projectile.aiStyle == style)
                     return;
 
-            if (projectile.owner != Main.myPlayer)
+            AdditionalProjectile(
+                requirement: projectile.owner == Main.myPlayer,
+                projectile: projectile,
+                source: source,
+                numProjLeft: config.AdditionalPlayerProjectilesLeft,
+                numProjRight: config.AdditionalPlayerProjectilesRight);
+
+            AdditionalProjectile(
+                requirement: projectile.owner != Main.myPlayer,
+                projectile: projectile,
+                source: source,
+                numProjLeft: config.AdditionalEnemyProjectilesLeft,
+                numProjRight: config.AdditionalEnemyProjectilesRight);
+        }
+
+        void AdditionalProjectile(
+            bool requirement,
+            Projectile projectile,
+            IEntitySource source,
+            int numProjLeft, 
+            int numProjRight)
+        {
+            if (!requirement)
                 return;
 
             // Projectile.NewProjectile invokes OnSpawn, so prevent infinite loop
@@ -54,9 +57,10 @@ public class ProjectileTweaks
             spawningProjectiles = true;
 
             // Spawn the additional projectiles on right
+            var config = Config.Instance;
             var posRight = projectile.position;
 
-            for (int i = 0; i < config.AdditionalProjectilesRight; i++)
+            for (int i = 0; i < numProjRight; i++)
             {
                 posRight += new Vector2(config.AdditionalProjectileHorizontalSpacing, 0);
                 SpawnProjectile(projectile, source, posRight);
@@ -65,7 +69,7 @@ public class ProjectileTweaks
             // Spawn the additional projectiles on left
             var posLeft = projectile.position;
 
-            for (int i = 0; i < config.AdditionalProjectilesLeft; i++)
+            for (int i = 0; i < numProjLeft; i++)
             {
                 posLeft -= new Vector2(config.AdditionalProjectileHorizontalSpacing, 0);
                 SpawnProjectile(projectile, source, posLeft);
@@ -86,22 +90,5 @@ public class ProjectileTweaks
                 projectile.ai[0],
                 projectile.ai[1],
                 projectile.ai[2]);
-
-        public override bool PreAI(Projectile projectile)
-        {
-            if (!Config.Instance.AllProjectilesIgnoreCollision)
-            {
-                return base.PreAI(projectile);
-            }
-            else
-            {
-                if (projectile.owner == Main.myPlayer)
-                {
-                    projectile.tileCollide = !Config.Instance.AllProjectilesIgnoreCollision;
-                }
-            }
-
-            return base.PreAI(projectile);
-        }
     }
 }
