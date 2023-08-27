@@ -188,6 +188,26 @@ Mods: {
 					Label: Player Max Run Speed
 					Tooltip: ""
 				}
+
+				AdditionalPlayerProjectilesLeft: {
+					Label: Additional Player Projectiles Left
+					Tooltip: ""
+				}
+
+				AdditionalPlayerProjectilesRight: {
+					Label: Additional Player Projectiles Right
+					Tooltip: ""
+				}
+
+				AdditionalEnemyProjectilesLeft: {
+					Label: Additional Enemy Projectiles Left
+					Tooltip: ""
+				}
+
+				AdditionalEnemyProjectilesRight: {
+					Label: Additional Enemy Projectiles Right
+					Tooltip: ""
+				}
 			}
 		}
 
