@@ -213,6 +213,16 @@ Mods: {
 					Label: Player Max Fall Speed
 					Tooltip: ""
 				}
+
+				PlayerRespawnTimeSingleplayer: {
+					Label: Player Respawn Time Singleplayer
+					Tooltip: ""
+				}
+
+				PlayerRespawnTimeMultiplayer: {
+					Label: Player Respawn Time Multiplayer
+					Tooltip: ""
+				}
 			}
 		}
 

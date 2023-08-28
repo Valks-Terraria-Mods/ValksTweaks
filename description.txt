@@ -3,6 +3,7 @@ Welcome to "Valks Tweaks" mod, formely known as "Faster Weapons" mod.
 Please note the following notable default config settings
 - All tools and weapons auto swing
 - Player fall speed limit has been upped 100x the normal vanilla limit
+- Player respawn time has been set to 5 seconds in singleplayer and 10 seconds in multiplayer
 - Players respawn with full health
 - Extractinator use speed is 20x faster
 
@@ -30,7 +31,8 @@ Please note the following notable default config settings
 - Horizontal Wing Acceleration Multiplier
 - Pickup Range Multiplier
 - Vein Miner (silt tiles are not currently supported)
-- Player Respawn Time
+- Player Respawn Time Singleplayer
+- Player Respawn Time Multiplayer
 - Extractinator Use Speed Multiplier
 - Disable Player Tombstones
 - Player Run Acceleration
