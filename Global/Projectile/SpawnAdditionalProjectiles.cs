@@ -94,7 +94,7 @@ class AdditionalProj : GlobalProjectile
                 return;
 
         AdditionalProjectile(
-            requirement: projectile.owner == Main.myPlayer,
+            requirement: projectile.owner == Main.myPlayer && projectile.friendly,
             projectile: projectile,
             source: source,
             numProjLeft: config.AdditionalPlayerProjectilesLeft,
