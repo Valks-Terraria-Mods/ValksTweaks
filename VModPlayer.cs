@@ -1,4 +1,6 @@
-﻿namespace ValksTweaks;
+﻿using Terraria.WorldBuilding;
+
+namespace ValksTweaks;
 
 public class VModPlayer : ModPlayer
 {
@@ -22,8 +24,13 @@ public class VModPlayer : ModPlayer
 
     public override void Kill(double damage, int hitDirection, bool pvp, PlayerDeathReason damageSource)
     {
-        int playerRespawnTime = ModContent.GetInstance<Config>().PlayerRespawnTime;
-        Player.respawnTimer = playerRespawnTime;
+        Config config = ModContent.GetInstance<Config>();
+
+        int respawnTimeSingleplayer = config.PlayerRespawnTimeSingleplayer;
+        int respawnTimeMultiplayer = config.PlayerRespawnTimeMultiplayer;
+
+        Player.respawnTimer = Main.netMode == NetmodeID.SinglePlayer ?
+            respawnTimeSingleplayer * 60 : respawnTimeMultiplayer * 60;
     }
 
     public override void OnRespawn()

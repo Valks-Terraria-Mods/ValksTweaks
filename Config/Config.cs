@@ -36,7 +36,11 @@ internal partial class Config : ModConfig
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(5)]
-    public int PlayerRespawnTime;
+    public int PlayerRespawnTimeSingleplayer;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(10)]
+    public int PlayerRespawnTimeMultiplayer;
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(true)]
