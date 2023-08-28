@@ -43,7 +43,7 @@ internal partial class Config : ModConfig
     public bool ShouldPlayerRespawnWithFullHealth;
 
     [BackgroundColor(0, 0, 0, 200)]
-    [DefaultValue(1f)]
+    [DefaultValue(20f)]
     [Range(1f, 20f)]
     public float ExtractinatorUseSpeedMultiplier;
 
@@ -58,4 +58,9 @@ internal partial class Config : ModConfig
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(0)]
     public int PlayerMaxRunSpeed;
+
+    [BackgroundColor(0, 0, 0, 200)]
+    [DefaultValue(1000)]
+    [Range(0, 10000)]
+    public float PlayerMaxFallSpeed;
 }

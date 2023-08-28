@@ -8,12 +8,16 @@ public class VModPlayer : ModPlayer
 
         float runAcc = config.PlayerRunAcceleration;
         float maxSpd = config.PlayerMaxRunSpeed;
+        float maxFallSpd = config.PlayerMaxFallSpeed;
 
         if (runAcc != 0)
             Player.runAcceleration = runAcc;
         
         if (maxSpd != 0)
             Player.maxRunSpeed = maxSpd;
+
+        if (maxFallSpd != 0)
+            Player.maxFallSpeed = config.PlayerMaxFallSpeed;
     }
 
     public override void Kill(double damage, int hitDirection, bool pvp, PlayerDeathReason damageSource)

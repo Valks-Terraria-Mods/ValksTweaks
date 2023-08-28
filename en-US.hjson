@@ -208,6 +208,11 @@ Mods: {
 					Label: Additional Enemy Projectiles Right
 					Tooltip: ""
 				}
+
+				PlayerMaxFallSpeed: {
+					Label: Player Max Fall Speed
+					Tooltip: ""
+				}
 			}
 		}
 
