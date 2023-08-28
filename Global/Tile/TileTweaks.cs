@@ -4,7 +4,7 @@ public class TileTweaks : GlobalTile
 {
     bool miningTiles;
 
-    public override void KillTile(int i, int j, int type, ref bool fail, ref bool effectOnly, ref bool noItem)
+    /*public override void KillTile(int i, int j, int type, ref bool fail, ref bool effectOnly, ref bool noItem)
     {
         if (!ModContent.GetInstance<Config>().VeinMiner || fail || miningTiles)
             return;
@@ -16,7 +16,7 @@ public class TileTweaks : GlobalTile
 
             MineAdjacent(i, j);
         }
-    }
+    }*/
 
     void MineAdjacent(int i, int j)
     {
