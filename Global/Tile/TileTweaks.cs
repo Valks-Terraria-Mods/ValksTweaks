@@ -61,6 +61,7 @@ public class TileTweaks : GlobalTile
         bool isSolid = Main.tileSolid[type];
         short metalDetectorPriority = Main.tileOreFinderPriority[type];
 
-        return isSolid && metalDetectorPriority > 0 && tile.HasTile;
+        return (isSolid && metalDetectorPriority > 0 && tile.HasTile)
+            || (TileID.Sets.Ore[type]);
     }
 }
