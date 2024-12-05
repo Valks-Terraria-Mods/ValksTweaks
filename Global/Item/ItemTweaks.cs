@@ -20,11 +20,11 @@ internal partial class ItemTweaks
         grabRange *= Config.Instance.PickupRangeMultiplier;
     }
 
-    public override bool? CanAutoReuseItem(Item item, Player player)
+    /*public override bool? CanAutoReuseItem(Item item, Player player)
     {
         if (IsTool(item) || !IsWeapon(item))
             return base.CanAutoReuseItem(item, player);
 
         return Config.Instance.AllWeaponAutoReuse;
-    }
+    }*/
 }

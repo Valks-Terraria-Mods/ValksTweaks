@@ -211,7 +211,7 @@ Mods: {
 
 				PlayerMaxFallSpeed: {
 					Label: Player Max Fall Speed
-					Tooltip: ""
+					Tooltip: The default vanilla fall speed is 10, anything higher will make you fall faster
 				}
 
 				PlayerRespawnTimeSingleplayer: {

@@ -18,21 +18,17 @@ internal partial class Config : ModConfig
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(1f)]
     [Range(1f, 3f)]
-    public float HorizontalWingSpeedMultiplier;
+    public int HorizontalWingSpeedMultiplier;
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(1f)]
     [Range(1f, 3f)]
-    public float HorizontalWingAccelerationMultiplier;
+    public int HorizontalWingAccelerationMultiplier;
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(1f)]
     [Range(1f, 1000f)]
     public int PickupRangeMultiplier;
-
-    [BackgroundColor(0, 0, 0, 200)]
-    [DefaultValue(false)]
-    public bool VeinMiner;
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(5)]
@@ -49,7 +45,7 @@ internal partial class Config : ModConfig
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(20f)]
     [Range(1f, 20f)]
-    public float ExtractinatorUseSpeedMultiplier;
+    public int ExtractinatorUseSpeedMultiplier;
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(false)]
@@ -57,14 +53,14 @@ internal partial class Config : ModConfig
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(0)]
-    public float PlayerRunAcceleration;
+    public int PlayerRunAcceleration;
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(0)]
     public int PlayerMaxRunSpeed;
 
     [BackgroundColor(0, 0, 0, 200)]
-    [DefaultValue(1000)]
+    [DefaultValue(10)]
     [Range(0, 10000)]
-    public float PlayerMaxFallSpeed;
+    public int PlayerMaxFallSpeed;
 }

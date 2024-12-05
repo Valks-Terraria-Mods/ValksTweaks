@@ -43,7 +43,7 @@ Please note that the "Projectile Type" config option has only been tested for th
 
 More features may be added later on.
 
-If you know of any bugs or have any ideas please tell me in the discord https://discord.gg/866cg8yfxZ
+If you know of any bugs or have any ideas please tell me in the discord https://discord.gg/j8HQZZ76r8
 
 Source: https://github.com/Valks-Terraria-Mods/ValksTweaks
 

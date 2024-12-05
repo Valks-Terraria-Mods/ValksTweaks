@@ -2,9 +2,9 @@
 
 internal partial class Config
 {
-    [BackgroundColor(0, 0, 0, 200)]
+    /*[BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(true)]
-    public bool AllWeaponAutoReuse;
+    public bool AllWeaponAutoReuse;*/
 
     [BackgroundColor(0, 0, 0, 200)]
     [DefaultValue(1)]
